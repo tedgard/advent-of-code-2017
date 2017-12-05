@@ -29,7 +29,8 @@ public class PuzzleInputReader {
             lines.forEach(fileContent::add);
             lines.close();
         } catch (Exception e) {
-            log.error("Error while reading the file {} ", filename, e);
+            log.error("Error while reading the file {}", filename, e);
+            return null;
         }
 
         log.info("Content size of {} : {} lines ", filename, fileContent.size());
